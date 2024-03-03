@@ -3,17 +3,20 @@ import React from 'react';
 import {Images} from '../assets/images';
 import {CARD_IMAGE_RATIO} from '../constants';
 import BetAmount from './BetAmount';
+import PlayerNameCard from './PlayerNameCard';
 
 const UserCard = ({
   image,
   style,
   shouldRender,
   isUser,
+  playNameCardStyle,
 }: {
   image: any;
   style: StyleProp<ViewStyle>;
   shouldRender?: boolean;
   isUser?: boolean;
+  playNameCardStyle?: StyleProp<ViewStyle>;
 }) => {
   if (!shouldRender) return null;
 
@@ -33,6 +36,7 @@ const UserCard = ({
           />
         </View>
       </View>
+      <PlayerNameCard style={playNameCardStyle} />
     </View>
   );
 };

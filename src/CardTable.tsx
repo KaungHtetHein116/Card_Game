@@ -37,21 +37,25 @@ const CardTable = () => {
             flexDirection: 'row-reverse',
           }}
           shouldRender={USER_COUNT >= 1}
+          playNameCardStyle={{position: 'absolute', top: -60, left: 0}}
         />
         <UserCard
           image={Images.user}
           style={{position: 'absolute', right: 60, flexDirection: 'row'}}
           shouldRender={USER_COUNT >= 2}
+          playNameCardStyle={{position: 'absolute', top: -60, left: 0}}
         />
         <UserCard
           image={Images.user}
           style={{position: 'absolute', bottom: -20, left: 60}}
           shouldRender={USER_COUNT >= 3}
+          playNameCardStyle={{position: 'absolute', bottom: -40}}
         />
         <UserCard
           image={Images.user}
           style={{position: 'absolute', right: 60, bottom: -20}}
           shouldRender={USER_COUNT >= 4}
+          playNameCardStyle={{position: 'absolute', bottom: -40}}
         />
         <UserCard
           image={Images.user}
@@ -62,12 +66,14 @@ const CardTable = () => {
             flexDirection: 'row-reverse',
           }}
           shouldRender={USER_COUNT >= 5}
+          playNameCardStyle={{position: 'absolute', left: 100}}
         />
         <UserCard
           image={Images.user}
           style={{position: 'absolute', right: width * 0.27, bottom: -20}}
           shouldRender
           isUser
+          playNameCardStyle={{position: 'absolute', bottom: -40}}
         />
       </View>
     </ImageBackground>
