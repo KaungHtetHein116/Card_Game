@@ -120,7 +120,8 @@ const styles = StyleSheet.create({
   },
   girlContainer: {
     position: 'absolute',
-    top: -60,
+    top: -50,
+    zIndex: -1,
     left: width * 0.27,
   },
   table: {
