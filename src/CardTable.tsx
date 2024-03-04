@@ -9,6 +9,7 @@ import {
 import {Images} from './assets/images';
 import UserCard from './components/UserCard';
 import {USER_COUNT} from './constants';
+import BetButtonGroup from './components/BetButtonGroup';
 
 const {height, width} = Dimensions.get('window');
 
@@ -77,6 +78,7 @@ const CardTable = () => {
           playNameCardStyle={{position: 'absolute', bottom: -40}}
         />
       </View>
+      <BetButtonGroup />
     </ImageBackground>
   );
 };
