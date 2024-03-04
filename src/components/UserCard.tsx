@@ -11,18 +11,28 @@ const UserCard = ({
   shouldRender,
   isUser,
   playNameCardStyle,
+  isBanker,
 }: {
   image: any;
   style: StyleProp<ViewStyle>;
   shouldRender?: boolean;
   isUser?: boolean;
   playNameCardStyle?: StyleProp<ViewStyle>;
+  isBanker?: boolean;
 }) => {
   if (!shouldRender) return null;
 
   return (
     <View style={[styles.container, style]}>
-      <BetAmount />
+      {isBanker ? (
+        <Image
+          source={Images.banker}
+          style={[styles.bankerImage]}
+          resizeMode="contain"
+        />
+      ) : (
+        <BetAmount />
+      )}
       <View>
         <Image source={image} style={[styles.userImage]} />
         <View style={[styles.cardImageContainer]}>
@@ -72,5 +82,10 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 5,
+  },
+  bankerImage: {
+    width: 40,
+    height: 40,
+    margin: 2,
   },
 });

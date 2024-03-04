@@ -56,6 +56,7 @@ const CardTable = () => {
           style={{position: 'absolute', right: 60, bottom: -20}}
           shouldRender={USER_COUNT >= 4}
           playNameCardStyle={{position: 'absolute', bottom: -40}}
+          isBanker
         />
         <UserCard
           image={Images.user}

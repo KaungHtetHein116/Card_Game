@@ -6,4 +6,5 @@ export const Images = {
   eight: require('./eight.png'),
   A: require('./A.png'),
   back: require('./back.png'),
+  banker: require('./banker.png'),
 };
